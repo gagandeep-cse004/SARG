@@ -767,7 +767,12 @@ body {
     .footer-brand {
         grid-column: span 3;
         padding-right: 0;
-        text-align: center;
+        /* text-align: center; */
+
+    }
+
+    .footer-brand p{
+        margin-left: 10px;
     }
 
     .footer-brand .logo {
@@ -809,18 +814,11 @@ body {
     }
 
     .footer-column h4::after {
-        left: 50%;
+        left: 5%;
         transform: translateX(-50%);
     }
 
-    .footer-column {
-        text-align: center;
-    }
-
-    .footer-column ul li a {
-        justify-content: center;
-    }
-
+    
     .footer-contact li {
         justify-content: center;
         text-align: left;
