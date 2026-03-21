@@ -215,7 +215,6 @@ body {
 .nav-cta:hover {
     color: #0a5c36 !important;
     background: #ffffff;
-    
     transform: translateY(-2px);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
@@ -234,13 +233,15 @@ body {
     visibility: hidden;
     transform: translateY(10px);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 100;
+    z-index: 1000;
+    pointer-events: none;
 }
 
 .nav-item:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    pointer-events: auto;
 }
 
 /* Dropdown Items */

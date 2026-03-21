@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | SARG Research Biolabs</title>
+    <title>Industrial Microbiology Training | SARG Research Biolabs</title>
     <meta name="description"
-        content="Learn about SARG Research Biolabs - A non-government, autonomous research organization dedicated to advancing excellence in Life Sciences, Biotechnology, and Environmental Studies.">
+        content="Comprehensive hands-on Industrial Microbiology training programs at SARG Research Biolabs. 15 and 30-day intensive programs covering microbial techniques, culture methods, and industrial applications.">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,8 @@
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+
     <style>
         /* ========================================
            CSS VARIABLES & RESET
@@ -41,7 +42,7 @@
             --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.1);
             --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.15);
             --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.2);
-            
+            --transition: all 0.3s ease;
         }
 
         * {
@@ -69,7 +70,7 @@
         }
 
         img {
-            
+
             height: auto;
         }
 
@@ -81,8 +82,6 @@
         ul {
             list-style: none;
         }
-
-        
 
         /* ========================================
            PAGE HEADER / HERO BANNER
@@ -118,7 +117,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(10, 92, 54, 0.6) 0%, rgba(26, 26, 46, 0.95) 100%);
+            background: linear-gradient(135deg, rgba(10, 92, 54, 0.85) 0%, rgba(26, 26, 46, 0.95) 100%);
             z-index: -2;
         }
 
@@ -172,12 +171,13 @@
             font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
+            line-height: 1.2;
         }
 
         .page-header-content p {
             font-size: 1.15rem;
             opacity: 0.9;
-            max-width: 700px;
+            max-width: 800px;
             margin: 0 auto;
             line-height: 1.8;
         }
@@ -200,7 +200,7 @@
 
         .section-header {
             text-align: center;
-            max-width: 700px;
+            max-width: 800px;
             margin: 0 auto 4rem;
         }
 
@@ -245,26 +245,26 @@
         }
 
         /* ========================================
-           ABOUT INTRO SECTION
+           PROGRAM OVERVIEW SECTION
            ======================================== */
-        .about-intro {
+        .program-overview {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
         }
 
-        .about-intro-image {
+        .program-overview-image {
             position: relative;
         }
 
-        .about-intro-image img {
+        .program-overview-image img {
             width: 100%;
             border-radius: 24px;
             box-shadow: var(--shadow-xl);
         }
 
-        .about-intro-image::before {
+        .program-overview-image::before {
             content: '';
             position: absolute;
             top: -20px;
@@ -276,22 +276,9 @@
             z-index: -1;
         }
 
-        .about-intro-image::after {
-            content: '';
+        .program-badge {
             position: absolute;
-            bottom: -20px;
-            right: -20px;
-            width: 150px;
-            height: 150px;
-            background: var(--gradient-accent);
-            border-radius: 24px;
-            z-index: -2;
-            opacity: 0.3;
-        }
-
-        .experience-badge {
-            position: absolute;
-            bottom: 30px;
+            top: 30px;
             right: -30px;
             background: var(--white);
             border-radius: 16px;
@@ -300,24 +287,26 @@
             text-align: center;
         }
 
-        .experience-badge h3 {
-            font-size: 2.5rem;
-            font-weight: 700;
+        .program-badge i {
+            font-size: 2rem;
             color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .program-badge h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--dark);
             line-height: 1;
         }
 
-        .experience-badge p {
+        .program-badge p {
             font-size: 0.85rem;
             color: var(--gray);
             margin-top: 0.25rem;
         }
 
-        .about-intro-content .section-badge {
-            margin-bottom: 1rem;
-        }
-
-        .about-intro-content h2 {
+        .program-overview-content h2 {
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
             font-weight: 700;
@@ -326,14 +315,14 @@
             line-height: 1.3;
         }
 
-        .about-intro-content p {
+        .program-overview-content p {
             color: var(--gray);
             margin-bottom: 1.5rem;
             line-height: 1.8;
             font-size: 1.05rem;
         }
 
-        .about-highlights {
+        .program-highlights {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1.5rem;
@@ -374,15 +363,15 @@
         }
 
         /* ========================================
-           VISION & MISSION SECTION
+           PROGRAM DURATION CARDS
            ======================================== */
-        .vision-mission-grid {
+        .duration-cards {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
         }
 
-        .vm-card {
+        .duration-card {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 24px;
@@ -392,7 +381,7 @@
             overflow: hidden;
         }
 
-        .vm-card::before {
+        .duration-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -402,12 +391,19 @@
             background: var(--gradient-accent);
         }
 
-        .vm-card:hover {
+        .duration-card:hover {
             background: rgba(255, 255, 255, 0.08);
             transform: translateY(-5px);
         }
 
-        .vm-icon {
+        .duration-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .duration-icon {
             width: 80px;
             height: 80px;
             background: var(--gradient-primary);
@@ -417,50 +413,64 @@
             justify-content: center;
             font-size: 2rem;
             color: var(--white);
-            margin-bottom: 1.5rem;
         }
 
-        .vm-card h3 {
+        .duration-info h3 {
             font-family: 'Playfair Display', serif;
             font-size: 1.75rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
 
-        .vm-card>p {
-            color: rgba(255, 255, 255, 0.8);
-            line-height: 1.8;
-            font-size: 1.05rem;
+        .duration-info p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
         }
 
-        .vm-card ul {
-            margin-top: 1.5rem;
+        /* ========================================
+           CURRICULUM LIST
+           ======================================== */
+        .curriculum-list {
+            margin-top: 2rem;
         }
 
-        .vm-card ul li {
+        .curriculum-item {
             display: flex;
             align-items: flex-start;
-            gap: 0.75rem;
+            gap: 1rem;
             margin-bottom: 1rem;
-            color: rgba(255, 255, 255, 0.85);
-            line-height: 1.6;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            transition: var(--transition);
         }
 
-        .vm-card ul li i {
+        .curriculum-item:hover {
+            background: rgba(255, 255, 255, 0.06);
+            transform: translateX(5px);
+        }
+
+        .curriculum-item i {
             color: var(--accent);
             margin-top: 0.3rem;
             flex-shrink: 0;
         }
 
+        .curriculum-item span {
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
         /* ========================================
-           WHAT WE DO SECTION
+           KEY FEATURES GRID
            ======================================== */
-        .what-we-do-grid {
+        .features-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
         }
 
-        .wwd-card {
+        .feature-card {
             background: var(--white);
             border-radius: 20px;
             padding: 2.5rem;
@@ -471,7 +481,7 @@
             overflow: hidden;
         }
 
-        .wwd-card::before {
+        .feature-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -484,17 +494,17 @@
             transition: var(--transition);
         }
 
-        .wwd-card:hover {
+        .feature-card:hover {
             transform: translateY(-10px);
             box-shadow: var(--shadow-xl);
             border-color: rgba(10, 92, 54, 0.1);
         }
 
-        .wwd-card:hover::before {
+        .feature-card:hover::before {
             transform: scaleX(1);
         }
 
-        .wwd-icon {
+        .feature-icon {
             width: 70px;
             height: 70px;
             background: rgba(10, 92, 54, 0.1);
@@ -508,73 +518,52 @@
             transition: var(--transition);
         }
 
-        .wwd-card:hover .wwd-icon {
+        .feature-card:hover .feature-icon {
             background: var(--gradient-primary);
             color: var(--white);
         }
 
-        .wwd-card h3 {
+        .feature-card h3 {
             font-size: 1.35rem;
             font-weight: 600;
             margin-bottom: 1rem;
             color: var(--dark);
         }
 
-        .wwd-card p {
+        .feature-card p {
             color: var(--gray);
             line-height: 1.7;
         }
 
         /* ========================================
-           OUR APPROACH SECTION
+           LEARNING OUTCOMES
            ======================================== */
-        .approach-grid {
+        .outcomes-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
         }
 
-        .approach-content h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: var(--dark);
-        }
-
-        .approach-content>p {
-            color: var(--gray);
-            line-height: 1.8;
-            font-size: 1.05rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .approach-list {
-            margin-top: 2rem;
-        }
-
-        .approach-item {
+        .outcome-item {
             display: flex;
             align-items: flex-start;
             gap: 1rem;
-            margin-bottom: 1.5rem;
             padding: 1.5rem;
-            background: var(--white);
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 16px;
-            box-shadow: var(--shadow-sm);
+            border-left: 4px solid var(--accent);
             transition: var(--transition);
         }
 
-        .approach-item:hover {
-            box-shadow: var(--shadow-md);
+        .outcome-item:hover {
+            background: rgba(255, 255, 255, 0.08);
             transform: translateX(5px);
         }
 
-        .approach-item-number {
+        .outcome-number {
             width: 45px;
             height: 45px;
-            background: var(--gradient-primary);
+            background: var(--gradient-accent);
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -585,176 +574,72 @@
             flex-shrink: 0;
         }
 
-        .approach-item-content h4 {
+        .outcome-content h4 {
             font-size: 1.1rem;
             font-weight: 600;
-            margin-bottom: 0.25rem;
-            color: var(--dark);
+            margin-bottom: 0.5rem;
         }
 
-        .approach-item-content p {
-            font-size: 0.9rem;
-            color: var(--gray);
+        .outcome-content p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.7);
             margin: 0;
             line-height: 1.6;
         }
 
-        .approach-image {
-            position: relative;
-        }
-
-        .approach-image img {
-            width: 100%;
-            border-radius: 24px;
-            box-shadow: var(--shadow-xl);
-        }
-
-        .approach-stats {
-            position: absolute;
-            bottom: -30px;
-            left: 30px;
-            right: 30px;
-            background: var(--white);
-            border-radius: 16px;
-            padding: 1.5rem 2rem;
-            box-shadow: var(--shadow-xl);
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            text-align: center;
-        }
-
-        .approach-stat h4 {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--primary);
-            line-height: 1;
-        }
-
-        .approach-stat p {
-            font-size: 0.8rem;
-            color: var(--gray);
-            margin-top: 0.25rem;
-        }
-
         /* ========================================
-           VALUES SECTION
+           WHO SHOULD ATTEND
            ======================================== */
-        .values-grid {
+        .audience-cards {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
         }
 
-        .value-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        .audience-card {
+            background: var(--white);
             border-radius: 20px;
-            padding: 2.5rem 2rem;
+            padding: 2rem;
             text-align: center;
+            box-shadow: var(--shadow-md);
             transition: var(--transition);
         }
 
-        .value-card:hover {
-            background: rgba(255, 255, 255, 0.08);
-            transform: translateY(-5px);
+        .audience-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
         }
 
-        .value-icon {
+        .audience-icon {
             width: 80px;
             height: 80px;
-            background: var(--gradient-accent);
+            background: rgba(10, 92, 54, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 2rem;
-            color: var(--white);
+            color: var(--primary);
             margin: 0 auto 1.5rem;
+            transition: var(--transition);
         }
 
-        .value-card h3 {
-            font-size: 1.25rem;
+        .audience-card:hover .audience-icon {
+            background: var(--gradient-primary);
+            color: var(--white);
+        }
+
+        .audience-card h3 {
+            font-size: 1.15rem;
             font-weight: 600;
             margin-bottom: 0.75rem;
-        }
-
-        .value-card p {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        /* ========================================
-           AFFILIATIONS SECTION
-           ======================================== */
-        .affiliations-content {
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .affiliation-cards {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .affiliation-card {
-            background: var(--white);
-            border-radius: 20px;
-            padding: 2.5rem;
-            box-shadow: var(--shadow-md);
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            text-align: left;
-        }
-
-        .affiliation-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .affiliation-icon {
-            width: 80px;
-            height: 80px;
-            background: rgba(10, 92, 54, 0.1);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: var(--primary);
-            flex-shrink: 0;
-        }
-
-        .affiliation-content h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
             color: var(--dark);
         }
 
-        .affiliation-content p {
+        .audience-card p {
             color: var(--gray);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             line-height: 1.6;
-        }
-
-        .affiliation-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(10, 92, 54, 0.1);
-            color: var(--primary);
-            padding: 0.35rem 0.75rem;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-top: 0.75rem;
         }
 
         /* ========================================
@@ -843,7 +728,6 @@
             border-color: var(--white);
         }
 
-        
         /* Scroll to Top Button */
         .scroll-top {
             position: fixed;
@@ -881,132 +765,34 @@
            RESPONSIVE STYLES
            ======================================== */
         @media (max-width: 1200px) {
-            .what-we-do-grid {
+            .features-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .values-grid {
+            .audience-cards {
                 grid-template-columns: repeat(2, 1fr);
-            }
-
-            .footer-grid {
-                grid-template-columns: repeat(3, 1fr);
             }
         }
 
         @media (max-width: 992px) {
-            .nav-menu {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 320px;
-                height: 100vh;
-                background: var(--white);
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 5rem 2rem 2rem;
-                box-shadow: var(--shadow-xl);
-                transition: var(--transition);
-                gap: 0;
-                overflow-y: auto;
-            }
-
-            .nav-menu.active {
-                right: 0;
-            }
-
-            .nav-item {
-                width: 100%;
-            }
-
-            .nav-link {
-                color: var(--dark);
-                width: 100%;
-                padding: 1rem 0;
-                border-bottom: 1px solid var(--gray-light);
-                justify-content: space-between;
-                border-radius: 0;
-            }
-
-            .nav-link:hover {
-                background: transparent;
-                color: var(--primary);
-            }
-
-            .dropdown-menu {
-                position: static;
-                opacity: 1;
-                visibility: visible;
-                transform: none;
-                box-shadow: none;
-                padding: 0;
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.3s ease;
-                border-radius: 0;
-                background: var(--light);
-                margin: 0 -2rem;
-                width: calc(100% + 4rem);
-            }
-
-            .nav-item.dropdown-open .dropdown-menu {
-                max-height: 500px;
-                padding: 1rem 2rem;
-            }
-
-            .nav-item.dropdown-open .nav-link i.fa-chevron-down {
-                transform: rotate(180deg);
-            }
-
-            .dropdown-item {
-                padding: 0.75rem 0;
-                border-bottom: 1px solid var(--gray-light);
-            }
-
-            .dropdown-item:last-child {
-                border-bottom: none;
-            }
-
-            .nav-cta {
-                margin: 1rem 0 0;
-                width: 100%;
-                justify-content: center;
-                background: var(--primary);
-                color: var(--white) !important;
-                border-radius: 50px;
-            }
-
-            .mobile-toggle {
-                display: flex;
-            }
-
-            .about-intro {
+            .program-overview {
                 grid-template-columns: 1fr;
             }
 
-            .about-intro-image {
+            .program-overview-image {
                 order: -1;
             }
 
-            .experience-badge {
+            .program-badge {
                 right: 20px;
-                bottom: 20px;
+                top: 20px;
             }
 
-            .vision-mission-grid {
+            .duration-cards {
                 grid-template-columns: 1fr;
             }
 
-            .approach-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .approach-image {
-                order: -1;
-                margin-bottom: 3rem;
-            }
-
-            .affiliation-cards {
+            .outcomes-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -1029,41 +815,22 @@
                 font-size: 2rem;
             }
 
-            .about-intro-content h2,
-            .approach-content h2 {
+            .program-overview-content h2 {
                 font-size: 2rem;
             }
 
-            .what-we-do-grid {
+            .features-grid {
                 grid-template-columns: 1fr;
             }
 
-            .values-grid {
+            .audience-cards {
                 grid-template-columns: 1fr;
             }
 
-            .about-highlights {
+            .program-highlights {
                 grid-template-columns: 1fr;
             }
 
-            .approach-stats {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-                position: relative;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                margin-top: 2rem;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            
-
-            
             .cta-content h2 {
                 font-size: 2rem;
             }
@@ -1078,21 +845,12 @@
                 font-size: 2rem;
             }
 
-            .vm-card {
+            .duration-card {
                 padding: 2rem;
             }
 
-            .wwd-card {
+            .feature-card {
                 padding: 1.5rem;
-            }
-
-            .value-card {
-                padding: 2rem 1.5rem;
-            }
-
-            .affiliation-card {
-                flex-direction: column;
-                text-align: center;
             }
 
             .btn {
@@ -1104,20 +862,15 @@
                 flex-direction: column;
             }
 
-            .nav-menu {
-                width: 100%;
-            }
-
-            .experience-badge {
+            .program-badge {
                 position: relative;
                 right: auto;
-                bottom: auto;
+                top: auto;
                 margin-top: 1.5rem;
                 display: inline-block;
             }
 
-            .about-intro-image::before,
-            .about-intro-image::after {
+            .program-overview-image::before {
                 display: none;
             }
         }
@@ -1125,15 +878,12 @@
 </head>
 
 <body>
-    <!-- Menu Overlay -->
-    <div class="menu-overlay" id="menuOverlay"></div>
-
-    <!-- Navbar -->
+    <!-- Include your navbar here -->
     <nav class="navbar scrolled" id="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
                 <div class="logo-icon">
-                    <img src="images/logo.png" alt="logo">
+                    <img src="../images/logo.png" alt="logo">
                 </div>
                 <!-- <div>
                     <div class="logo-text">SARG Research</div>
@@ -1143,28 +893,28 @@
 
             <ul class="nav-menu" id="navMenu">
                 <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="../index.html" class="nav-link">Home</a>
                 </li>
-                <li class="nav-item has-dropdown active">
+                <li class="nav-item has-dropdown">
                     <a href="#" class="nav-link dropdown-toggle">
                         About <i class="fas fa-chevron-down"></i>
                     </a>
                     <div class="dropdown-menu">
-                        <a href="about.html" class="dropdown-item">
+                        <a href="../about.html" class="dropdown-item">
                             <i class="fas fa-info-circle"></i>
                             <div class="dropdown-item-content">
                                 <h4>About Us</h4>
                                 <p>about our organization</p>
                             </div>
                         </a>
-                        <a href="about.html#vision" class="dropdown-item">
+                        <a href="../about.html#vision" class="dropdown-item">
                             <i class="fas fa-eye"></i>
                             <div class="dropdown-item-content">
                                 <h4>Vision & Mission</h4>
                                 <p>Our goals and objectives</p>
                             </div>
                         </a>
-                        <a href="about.html#approach" class="dropdown-item">
+                        <a href="../about.html#approach" class="dropdown-item">
                             <i class="fas fa-lightbulb"></i>
                             <div class="dropdown-item-content">
                                 <h4>Our Approach</h4>
@@ -1178,21 +928,21 @@
                         Research <i class="fas fa-chevron-down"></i>
                     </a>
                     <div class="dropdown-menu">
-                        <a href="research.html" class="dropdown-item">
+                        <a href="../research.html" class="dropdown-item">
                             <i class="fas fa-flask"></i>
                             <div class="dropdown-item-content">
                                 <h4>Research Areas</h4>
                                 <p>Our research domains</p>
                             </div>
                         </a>
-                        <a href="research.html#training" class="dropdown-item">
+                        <a href="../research.html#training" class="dropdown-item">
                             <i class="fas fa-graduation-cap"></i>
                             <div class="dropdown-item-content">
                                 <h4>Training Programs</h4>
                                 <p>Skill development courses</p>
                             </div>
                         </a>
-                        <a href="research.html#collaboration" class="dropdown-item">
+                        <a href="../research.html#collaboration" class="dropdown-item">
                             <i class="fas fa-handshake"></i>
                             <div class="dropdown-item-content">
                                 <h4>Collaboration</h4>
@@ -1201,43 +951,43 @@
                         </a>
                     </div>
                 </li>
-                <li class="nav-item has-dropdown">
+                <li class="nav-item has-dropdown active">
                     <a href="#" class="nav-link dropdown-toggle">
                         Programs <i class="fas fa-chevron-down"></i>
                     </a>
                     <div class="dropdown-menu">
-                        <a href="programs.html" class="dropdown-item">
+                        <a href="../programs.html" class="dropdown-item">
                             <i class="fas fa-chalkboard-teacher"></i>
                             <div class="dropdown-item-content">
                                 <h4>Programs</h4>
                                 <p>See our programs</p>
                             </div>
                         </a>
-                        <a href="programs.html#flagship" class="dropdown-item">
+                        <a href="../programs.html#flagship" class="dropdown-item">
                             <i class="fas fa-star"></i>
                             <div class="dropdown-item-content">
                                 <h4>Flagship Programs</h4>
                                 <p>Our key initiatives</p>
                             </div>
                         </a>
-                        <a href="programs.html#courses" class="dropdown-item">
+                        <a href="../programs.html#courses" class="dropdown-item">
                             <i class="fas fa-book-open"></i>
                             <div class="dropdown-item-content">
                                 <h4>Training Courses</h4>
                                 <p>Professional development</p>
                             </div>
                         </a>
-                        
+
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a href="membership.html" class="nav-link">Membership</a>
+                    <a href="../membership.html" class="nav-link">Membership</a>
                 </li>
                 <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="../contact.html" class="nav-link">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a href="membership.html" class="nav-link nav-cta">
+                    <a href="../membership.html" class="nav-link nav-cta">
                         <i class="fas fa-user-plus"></i> Join Now
                     </a>
                 </li>
@@ -1251,95 +1001,101 @@
         </div>
     </nav>
 
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
     <!-- Page Header -->
     <section class="page-header">
         <div class="page-header-bg">
-            <img src="images/aboutbg.avif"
-                alt="Laboratory Background">
+            <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3"
+                alt="Industrial Microbiology Laboratory">
         </div>
         <div class="page-header-overlay"></div>
         <div class="page-header-pattern"></div>
         <div class="container">
             <div class="page-header-content">
                 <div class="breadcrumb">
-                    <a href="index.html">Home</a>
+                    <a href="../index.html">Home</a>
                     <i class="fas fa-chevron-right"></i>
-                    <span>About Us</span>
+                    <a href="../programs.html">Programs</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Industrial Microbiology</span>
                 </div>
-                <h1>About SARG Research Biolabs</h1>
-                <p>Empowering research excellence through innovation, collaboration, and ethical scholarship in Life
-                    Sciences and Biotechnology.</p>
+                <h1>Industrial Microbiology Training</h1>
+                <p>Experience the fascinating world of microbiology through our immersive hands-on training program.
+                    Engage in practical laboratory exercises and cultivate valuable skills for your scientific journey.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- About Intro Section -->
-    <section class="section" id="about">
+    <!-- Program Overview Section -->
+    <section class="section" id="overview">
         <div class="container">
-            <div class="about-intro">
-                <div class="about-intro-image">
-                    <img src="images/about.avif"
-                        alt="Research Laboratory">
-                    <div class="experience-badge">
-                        <h3>2024</h3>
-                        <p>Established</p>
+            <div class="program-overview">
+                <div class="program-overview-image">
+                    <img src="https://images.unsplash.com/photo-1582719471137-c3967ffb1c42?ixlib=rb-4.0.3"
+                        alt="Microbiology Laboratory Work">
+                    <div class="program-badge">
+                        <i class="fas fa-certificate"></i>
+                        <h3>Certified</h3>
+                        <p>Training Program</p>
                     </div>
                 </div>
-                <div class="about-intro-content">
+                <div class="program-overview-content">
                     <div class="section-badge">
-                        <i class="fas fa-building"></i> Who We Are
+                        <i class="fas fa-microscope"></i> Hands-On Training
                     </div>
-                    <h2>A Research Organization Dedicated to Scientific Excellence</h2>
+                    <h2>Comprehensive Industrial Microbiology Program</h2>
                     <p>
-                        <strong>SARG Research Biolabs</strong> is a non-government, autonomous research organization
-                        registered with the Ministry of MSME, Government of India, and established in the National
-                        Capital Territory of Delhi.
+                        Our Industrial Microbiology training program offers an immersive, hands-on learning experience
+                        designed to equip you with essential laboratory skills and practical knowledge in microbiology
+                        research.
                     </p>
                     <p>
-                        Founded in 2024, it functions as a research division of the <strong>Institute for Applied
-                            Research and Training (IART)</strong>, in collaboration with <strong>GANESH Scientific
-                            Research Foundation</strong> (ISO 9001:2015 Certified Research and Testing Laboratory).
+                        Work closely with experienced instructors who will guide you through experiments, fostering a
+                        deep understanding of microbial identification, culture techniques, and safety protocols.
                     </p>
                     <p>
-                        We are dedicated to advancing excellence in Life Sciences, Biotechnology, Environmental Studies,
-                        Social Sciences, and emerging interdisciplinary fields through research, training,
-                        collaboration, and innovation-driven initiatives.
+                        Immerse yourself in a dynamic learning environment that encourages critical thinking,
+                        problem-solving, and teamwork, equipping you with the confidence and proficiency to excel in the
+                        field of microbiology.
                     </p>
-                    <div class="about-highlights">
-                        <div class="highlight-item">
-                            <div class="highlight-icon">
-                                <i class="fas fa-certificate"></i>
-                            </div>
-                            <div>
-                                <h4>ISO Certified</h4>
-                                <p>ISO 9001:2015 certified laboratory</p>
-                            </div>
-                        </div>
-                        <div class="highlight-item">
-                            <div class="highlight-icon">
-                                <i class="fas fa-university"></i>
-                            </div>
-                            <div>
-                                <h4>MSME Registered</h4>
-                                <p>Govt. of India recognized</p>
-                            </div>
-                        </div>
+                    <div class="program-highlights">
                         <div class="highlight-item">
                             <div class="highlight-icon">
                                 <i class="fas fa-flask"></i>
                             </div>
                             <div>
-                                <h4>Advanced Research</h4>
-                                <p>Cutting-edge facilities</p>
+                                <h4>Practical Laboratory Work</h4>
+                                <p>Extensive hands-on experiments</p>
                             </div>
                         </div>
                         <div class="highlight-item">
                             <div class="highlight-icon">
-                                <i class="fas fa-users"></i>
+                                <i class="fas fa-user-graduate"></i>
                             </div>
                             <div>
-                                <h4>Expert Team</h4>
-                                <p>Experienced researchers</p>
+                                <h4>Expert Instructors</h4>
+                                <p>Learn from experienced professionals</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4>Flexible Duration</h4>
+                                <p>15 or 30-day programs available</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div>
+                                <h4>Certification</h4>
+                                <p>Recognized upon completion</p>
                             </div>
                         </div>
                     </div>
@@ -1348,283 +1104,339 @@
         </div>
     </section>
 
-    <!-- Vision & Mission Section -->
-    <section class="section section-dark" id="vision">
+    <!-- Program Duration Section -->
+    <section class="section section-dark" id="programs">
         <div class="container">
             <div class="section-header">
                 <div class="section-badge">
-                    <i class="fas fa-compass"></i> Our Direction
+                    <i class="fas fa-calendar-alt"></i> Program Options
                 </div>
-                <h2 class="section-title">Vision & Mission</h2>
+                <h2 class="section-title">Choose Your Training Duration</h2>
                 <p class="section-subtitle">
-                    Guiding principles that drive our commitment to research excellence, innovation, and societal
-                    impact.
+                    Select from our comprehensive 15-day or intensive 30-day programs, both designed to provide
+                    thorough training in industrial microbiology techniques and applications.
                 </p>
             </div>
-            <div class="vision-mission-grid">
-                <div class="vm-card">
-                    <div class="vm-icon">
-                        <i class="fas fa-eye"></i>
+            <div class="duration-cards">
+                <!-- 15 Days Program -->
+                <div class="duration-card">
+                    <div class="duration-header">
+                        <div class="duration-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="duration-info">
+                            <h3>15 Days Program</h3>
+                            <p>2 Weeks Intensive Training</p>
+                        </div>
                     </div>
-                    <h3>Our Vision</h3>
-                    <p>
-                        To be a globally recognized center for research and training that fosters innovation, ethical
-                        scholarship, scientific excellence, and sustainable solutions to complex global challenges.
-                    </p>
+                    <div class="curriculum-list">
+                        <div class="curriculum-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Introduction to Good Laboratory Practices and General Safety Instructions</span>
+                        </div>
+                        <div class="curriculum-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Instrumentation: Autoclave, Laminar Air Flow, Incubator/Shaker, Hot Air Oven,
+                                Microscope</span>
+                        </div>
+                        <div class="curriculum-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Various Media (Solid/Liquid) Preparation and Sterilization</span>
+                        </div>
+                        <div class="curriculum-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Isolation and Screening of Microorganisms</span>
+                        </div>
+                        <div class="curriculum-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Serial Dilution Method</span>
+                        </div>
+                        <div class="curriculum-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Pure Culture Techniques (Streaking, Pouring & Plating)</span>
+                        </div>
+                        <div class="curriculum-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Culturing & Sub Culturing Methods of Microbes</span>
+                        </div>
+                        <div class="curriculum-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Isolation and Culturing from Soil and Water Samples</span>
+                        </div>
+                        <div class="curriculum-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Staining Techniques: Gram Staining, Endospore Staining</span>
+                        </div>
+                        <div class="curriculum-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>IMViC Test: Indole, Methyl Red, Voges-Proskauer, Citrate Utilization</span>
+                        </div>
+                        <div class="curriculum-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Bacterial Growth Curve Analysis/Growth Kinetics</span>
+                        </div>
+                        <div class="curriculum-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Antibiotics Sensitivity Test</span>
+                        </div>
+                        <div class="curriculum-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Culturing Techniques for E. coli or Industrially Important Microorganisms</span>
+                        </div>
+                        <div class="curriculum-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Isolation and Identification of Enzyme Producing Microbe</span>
+                        </div>
+                        <div class="curriculum-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Isolation of Antibiotic Producing Microbe by Crowded Plate Method</span>
+                        </div>
+                        <div class="curriculum-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Isolation of Antibiotic Resistance (MDR) Microbe from Soil Sample</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="vm-card">
-                    <div class="vm-icon">
-                        <i class="fas fa-bullseye"></i>
+
+                <!-- 30 Days Program -->
+                <div class="duration-card">
+                    <div class="duration-header">
+                        <div class="duration-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="duration-info">
+                            <h3>30 Days Program</h3>
+                            <p>4 Weeks Comprehensive Training</p>
+                        </div>
                     </div>
-                    <h3>Our Mission</h3>
-                    <ul>
-                        <li>
+                    <div class="curriculum-list">
+                        <div class="curriculum-item">
                             <i class="fas fa-check-circle"></i>
-                            To deliver high-quality research training and capacity-building programs aligned with
-                            international academic and industry standards.
-                        </li>
-                        <li>
+                            <span>All 15-day program modules included</span>
+                        </div>
+                        <div class="curriculum-item">
                             <i class="fas fa-check-circle"></i>
-                            To facilitate cutting-edge, multidisciplinary research that contributes to knowledge
-                            generation and evidence-based policy development.
-                        </li>
-                        <li>
+                            <span>Isolation and Culturing of Microbes from Air Samples</span>
+                        </div>
+                        <div class="curriculum-item">
                             <i class="fas fa-check-circle"></i>
-                            To build a collaborative ecosystem connecting researchers, practitioners, industry leaders,
-                            policymakers, and institutions worldwide.
-                        </li>
-                        <li>
+                            <span>Components, Use and Care of Compound Microscope</span>
+                        </div>
+                        <div class="curriculum-item">
                             <i class="fas fa-check-circle"></i>
-                            To uphold the highest standards of ethics, transparency, and academic integrity in all
-                            research and training activities.
-                        </li>
-                    </ul>
+                            <span>Advanced Staining: Capsular Staining, Flagellar Staining</span>
+                        </div>
+                        <div class="curriculum-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Enzymatic Tests: Catalase Activity, Oxidase Activity</span>
+                        </div>
+                        <div class="curriculum-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Optimization of Growth Conditions for Industrial Microorganisms</span>
+                        </div>
+                        <div class="curriculum-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Fungal Staining & Actinomycetes Staining</span>
+                        </div>
+                        <div class="curriculum-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Chemical Control of Microbes</span>
+                        </div>
+                        <div class="curriculum-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Effect of Temperature on Growth of Bacteria</span>
+                        </div>
+                        <div class="curriculum-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Effect of pH on Growth of Bacteria</span>
+                        </div>
+                        <div class="curriculum-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Isolation of Lipolytic Microbes from Butter</span>
+                        </div>
+                        <div class="curriculum-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Effect of pH, Temperature, Pressure, Inhibitors on Growth</span>
+                        </div>
+                        <div class="curriculum-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Effect of Physical & Chemical Mutagens on Growth of Microbes</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- What We Do Section -->
+    <!-- Key Features Section -->
     <section class="section section-light">
         <div class="container">
             <div class="section-header">
                 <div class="section-badge">
-                    <i class="fas fa-cogs"></i> What We Do
+                    <i class="fas fa-star"></i> Program Features
                 </div>
-                <h2 class="section-title">Our Core Activities</h2>
+                <h2 class="section-title">What Makes Our Program Unique</h2>
                 <p class="section-subtitle">
-                    SARG Research Biolabs acts as a catalyst for research excellence through diverse initiatives.
+                    Our Industrial Microbiology training stands out with comprehensive features designed for optimal
+                    learning and skill development.
                 </p>
             </div>
-            <div class="what-we-do-grid">
-                <div class="wwd-card">
-                    <div class="wwd-icon">
-                        <i class="fas fa-microscope"></i>
-                    </div>
-                    <h3>Scientific Research</h3>
-                    <p>Conducting and facilitating advanced scientific and social research initiatives across multiple
-                        disciplines including molecular biology, microbiology, and environmental sciences.</p>
-                </div>
-                <div class="wwd-card">
-                    <div class="wwd-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Training & Education</h3>
-                    <p>Offering structured training programs, workshops, certification courses, and research mentorship
-                        that bridge the gap between theoretical knowledge and practical skills.</p>
-                </div>
-                <div class="wwd-card">
-                    <div class="wwd-icon">
-                        <i class="fas fa-project-diagram"></i>
-                    </div>
-                    <h3>Collaborative Research</h3>
-                    <p>Supporting translational and collaborative research projects with real-world applications through
-                        partnerships with academic institutions and industry.</p>
-                </div>
-                <div class="wwd-card">
-                    <div class="wwd-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3>Innovation Promotion</h3>
-                    <p>Promoting innovation through academic recognition platforms, networking opportunities, and
-                        knowledge-sharing forums for researchers and scholars.</p>
-                </div>
-                <div class="wwd-card">
-                    <div class="wwd-icon">
-                        <i class="fas fa-balance-scale"></i>
-                    </div>
-                    <h3>Policy Advocacy</h3>
-                    <p>Advocating evidence-based policy dialogue and socially responsible research practices that
-                        contribute to sustainable development.</p>
-                </div>
-                <div class="wwd-card">
-                    <div class="wwd-icon">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
                         <i class="fas fa-hands-helping"></i>
                     </div>
-                    <h3>Strategic Partnerships</h3>
-                    <p>Enabling sustainable research development through crowdfunding initiatives and strategic
-                        partnerships with national and international organizations.</p>
+                    <h3>Hands-On Experience</h3>
+                    <p>Direct practical experience with laboratory equipment and real-world microbiology techniques
+                        under expert supervision.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Expert Instructors</h3>
+                    <p>Learn from experienced microbiologists with years of industry and academic research experience.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-vials"></i>
+                    </div>
+                    <h3>State-of-the-Art Lab</h3>
+                    <p>Access to modern laboratory facilities equipped with the latest instruments and safety protocols.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Safety Training</h3>
+                    <p>Comprehensive training in laboratory safety practices and Good Laboratory Practices (GLP).</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <h3>Study Materials</h3>
+                    <p>Complete course materials, protocols, and reference guides for all laboratory procedures.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certification</h3>
+                    <p>Receive a recognized certificate upon successful completion of the training program.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Our Approach Section -->
-    <section class="section" id="approach">
-        <div class="container">
-            <div class="approach-grid">
-                <div class="approach-content">
-                    <div class="section-badge">
-                        <i class="fas fa-route"></i> Our Approach
-                    </div>
-                    <h2>A Multidisciplinary & Globally Engaged Framework</h2>
-                    <p>
-                        With a multidisciplinary and globally engaged framework, SARG Research Biolabs empowers
-                        researchers and organizations to address complex scientific, environmental, and societal
-                        challenges.
-                    </p>
-                    <p>
-                        By integrating rigorous methodology with innovation-driven thinking, we contribute meaningfully
-                        to India's expanding global presence in academia, applied research, and sustainable development.
-                    </p>
-                    <div class="approach-list">
-                        <div class="approach-item">
-                            <div class="approach-item-number">01</div>
-                            <div class="approach-item-content">
-                                <h4>Collaboration</h4>
-                                <p>Building partnerships that transcend borders and disciplines</p>
-                            </div>
-                        </div>
-                        <div class="approach-item">
-                            <div class="approach-item-number">02</div>
-                            <div class="approach-item-content">
-                                <h4>Integrity</h4>
-                                <p>Upholding ethical standards in all research activities</p>
-                            </div>
-                        </div>
-                        <div class="approach-item">
-                            <div class="approach-item-number">03</div>
-                            <div class="approach-item-content">
-                                <h4>Inclusivity</h4>
-                                <p>Creating opportunities for researchers from all backgrounds</p>
-                            </div>
-                        </div>
-                        <div class="approach-item">
-                            <div class="approach-item-number">04</div>
-                            <div class="approach-item-content">
-                                <h4>Excellence</h4>
-                                <p>Striving for the highest quality in research and training</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="approach-image">
-                    <img src="images/testing.avif"
-                        alt="Research Collaboration">
-                    <div class="approach-stats">
-                        <div class="approach-stat">
-                            <h4>50+</h4>
-                            <p>Research Projects</p>
-                        </div>
-                        <div class="approach-stat">
-                            <h4>500+</h4>
-                            <p>Trained Scholars</p>
-                        </div>
-                        <div class="approach-stat">
-                            <h4>20+</h4>
-                            <p>Partner Institutions</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Core Values Section -->
-    <section class="section section-dark" id="values">
+    <!-- Learning Outcomes Section -->
+    <section class="section section-dark" id="outcomes">
         <div class="container">
             <div class="section-header">
                 <div class="section-badge">
-                    <i class="fas fa-heart"></i> Our Values
+                    <i class="fas fa-graduation-cap"></i> Learning Outcomes
                 </div>
-                <h2 class="section-title">Core Values We Stand By</h2>
+                <h2 class="section-title">What You Will Achieve</h2>
                 <p class="section-subtitle">
-                    These principles guide every aspect of our work and define who we are as an organization.
+                    Upon completion of this program, you will have developed comprehensive skills in industrial
+                    microbiology and laboratory techniques.
                 </p>
             </div>
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-shield-alt"></i>
+            <div class="outcomes-grid">
+                <div class="outcome-item">
+                    <div class="outcome-number">01</div>
+                    <div class="outcome-content">
+                        <h4>Laboratory Proficiency</h4>
+                        <p>Master essential laboratory techniques including media preparation, sterilization, and
+                            aseptic
+                            handling procedures.</p>
                     </div>
-                    <h3>Ethical Standards</h3>
-                    <p>We maintain the highest ethical standards in all our research and training activities, ensuring
-                        integrity and transparency.</p>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-award"></i>
+                <div class="outcome-item">
+                    <div class="outcome-number">02</div>
+                    <div class="outcome-content">
+                        <h4>Microbial Isolation</h4>
+                        <p>Gain expertise in isolating and culturing microorganisms from various environmental samples.
+                        </p>
                     </div>
-                    <h3>Academic Integrity</h3>
-                    <p>We uphold rigorous academic standards and promote original, honest scholarship in all our
-                        programs.</p>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-globe-americas"></i>
+                <div class="outcome-item">
+                    <div class="outcome-number">03</div>
+                    <div class="outcome-content">
+                        <h4>Identification Techniques</h4>
+                        <p>Learn multiple staining methods and biochemical tests for accurate microbial identification.
+                        </p>
                     </div>
-                    <h3>Global Engagement</h3>
-                    <p>We foster international collaborations and contribute to India's growing presence in global
-                        research.</p>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-seedling"></i>
+                <div class="outcome-item">
+                    <div class="outcome-number">04</div>
+                    <div class="outcome-content">
+                        <h4>Instrumentation Skills</h4>
+                        <p>Become proficient in operating and maintaining essential microbiology laboratory equipment.
+                        </p>
                     </div>
-                    <h3>Sustainable Impact</h3>
-                    <p>We focus on research that creates lasting positive impact on communities and supports development
-                        goals.</p>
+                </div>
+                <div class="outcome-item">
+                    <div class="outcome-number">05</div>
+                    <div class="outcome-content">
+                        <h4>Research Methodology</h4>
+                        <p>Understand research design, experimental procedures, and data analysis in microbiology.</p>
+                    </div>
+                </div>
+                <div class="outcome-item">
+                    <div class="outcome-number">06</div>
+                    <div class="outcome-content">
+                        <h4>Safety Compliance</h4>
+                        <p>Implement proper safety protocols and maintain ethical standards in laboratory work.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Affiliations Section -->
-    <section class="section section-light" id="affiliations">
+    <!-- Who Should Attend Section -->
+    <section class="section section-light">
         <div class="container">
-            <div class="affiliations-content">
+            <div class="section-header">
                 <div class="section-badge">
-                    <i class="fas fa-handshake"></i> Our Affiliations
+                    <i class="fas fa-user-friends"></i> Target Audience
                 </div>
-                <h2 class="section-title">Institutional Affiliations</h2>
+                <h2 class="section-title">Who Should Attend</h2>
                 <p class="section-subtitle">
-                    SARG Research Biolabs operates under established institutional frameworks, ensuring credibility and
-                    quality in all our endeavors.
+                    This program is designed for individuals seeking to enhance their practical skills in industrial
+                    microbiology and laboratory techniques.
                 </p>
-                <div class="affiliation-cards">
-                    <div class="affiliation-card">
-                        <div class="affiliation-icon">
-                            <i class="fas fa-university"></i>
-                        </div>
-                        <div class="affiliation-content">
-                            <h3>Institute for Applied Research and Training (IART)</h3>
-                            <p>SARG Research Biolabs functions as a research division of IART, focusing on applied
-                                research and professional training programs.</p>
-                            <span class="affiliation-badge"><i class="fas fa-check"></i> Parent Organization</span>
-                        </div>
+            </div>
+            <div class="audience-cards">
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="fas fa-user-graduate"></i>
                     </div>
-                    <div class="affiliation-card">
-                        <div class="affiliation-icon">
-                            <i class="fas fa-flask"></i>
-                        </div>
-                        <div class="affiliation-content">
-                            <h3>GANESH Scientific Research Foundation</h3>
-                            <p>An ISO 9001:2015 Certified Research and Testing Laboratory, providing advanced laboratory
-                                infrastructure and technical collaboration.</p>
-                            <span class="affiliation-badge"><i class="fas fa-certificate"></i> ISO 9001:2015
-                                Certified</span>
-                        </div>
+                    <h3>Students</h3>
+                    <p>Undergraduate and postgraduate students in Life Sciences, Biotechnology, and Microbiology.</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="fas fa-search"></i>
                     </div>
+                    <h3>Researchers</h3>
+                    <p>Early-career researchers looking to strengthen their laboratory and technical skills.</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Faculty</h3>
+                    <p>Academic faculty seeking to update their practical knowledge and teaching methodologies.</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Professionals</h3>
+                    <p>Industry professionals working in pharmaceutical, food, or biotechnology sectors.</p>
                 </div>
             </div>
         </div>
@@ -1634,31 +1446,36 @@
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2>Ready to Collaborate With Us?</h2>
+                <h2>Ready to Begin Your Microbiology Journey?</h2>
                 <p>
-                    Join our community of scholars, researchers, and innovators. Together, let's advance scientific
-                    excellence and create meaningful impact.
+                    Join our comprehensive Industrial Microbiology training program and gain the hands-on experience
+                    needed to excel in your scientific career.
                 </p>
                 <div class="cta-buttons">
-                    <a href="membership.html" class="btn btn-primary">
-                        <i class="fas fa-user-plus"></i> Become a Member
+                    <a href="contact.html" class="btn btn-primary">
+                        <i class="fas fa-user-plus"></i> Register Now
                     </a>
                     <a href="contact.html" class="btn btn-outline">
-                        <i class="fas fa-envelope"></i> Contact Us
+                        <i class="fas fa-envelope"></i> Get More Information
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Include your footer here -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="index.html" class="logo">
+                    <a href="../index.html" class="logo">
                         <div class="logo-icon">
-                            <img src="images/logo.png" alt="logo" style="margin-left: 60px;">
+                            <img src="../images/logo.png" alt="logo" style="margin-left: 60px;">
                         </div>
                         <!-- <div>
                             <div class="logo-text">SARG Research</div>
@@ -1680,21 +1497,21 @@
                 <div class="footer-column">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="research.html">Research</a></li>
-                        <li><a href="programs.html">Programs</a></li>
-                        <li><a href="membership.html">Membership</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../research.html">Research</a></li>
+                        <li><a href="../programs.html">Programs</a></li>
+                        <li><a href="../membership.html">Membership</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h4>Programs</h4>
                     <ul>
-                        <li><a href="programs.html">Research Foundation</a></li>
-                        <li><a href="programs.html">Molecular Biology</a></li>
-                        <li><a href="programs.html">Microbiology</a></li>
-                        <li><a href="programs.html">Biostatistics</a></li>
-                        <li><a href="programs.html">Biodiversity</a></li>
+                        <li><a href="../programs.html">Research Foundation</a></li>
+                        <li><a href="../programs.html">Molecular Biology</a></li>
+                        <li><a href="../programs.html">Microbiology</a></li>
+                        <li><a href="../programs.html">Biostatistics</a></li>
+                        <li><a href="../programs.html">Biodiversity</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -1736,6 +1553,27 @@
         </div>
     </footer>
 
-    <script src="js/navbar.js"></script>
+    <script>
+        // Scroll to Top Functionality
+        const scrollTopBtn = document.getElementById('scrollTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+    <script src="../js/navbar.js"></script>
+
 </body>
+
 </html>
