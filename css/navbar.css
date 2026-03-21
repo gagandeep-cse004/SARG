@@ -820,7 +820,7 @@ body {
 
     
     .footer-contact li {
-        justify-content: center;
+        /* justify-content: center; */
         text-align: left;
     }
 
