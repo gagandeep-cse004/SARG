@@ -383,7 +383,7 @@ body {
         padding: 0;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease;
+        transition: 0.3s ease;
         border-radius: 0;
         background: #f8f9fa;
         margin: 0 -2rem;
