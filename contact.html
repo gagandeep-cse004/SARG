@@ -8,7 +8,7 @@
     <meta name="description"
         content="Get in touch with SARG Research Biolabs. Contact us for research collaboration, membership inquiries, training programs, or any questions about our services.">
     <link rel="icon" href="images/logo1.png">
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -360,7 +360,7 @@
             line-height: 1.3;
         }
 
-        .contact-form-info > p {
+        .contact-form-info>p {
             color: var(--gray);
             line-height: 1.8;
             font-size: 1.05rem;
@@ -687,8 +687,15 @@
         }
 
         @keyframes successPulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
         }
 
         .form-success h3 {
@@ -1288,7 +1295,7 @@
                                 <p>Professional development</p>
                             </div>
                         </a>
-                        
+
                     </div>
                 </li>
                 <li class="nav-item">
@@ -1315,8 +1322,7 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="page-header-bg">
-            <img src="images/contactbg.avif"
-                alt="Contact Background">
+            <img src="images/contactbg.avif" alt="Contact Background">
         </div>
         <div class="page-header-overlay"></div>
         <div class="page-header-pattern"></div>
@@ -1328,7 +1334,8 @@
                     <span>Contact Us</span>
                 </div>
                 <h1>Get in Touch</h1>
-                <p>Have questions about our research programs, training courses, or membership? We'd love to hear from you. Reach out to us today!</p>
+                <p>Have questions about our research programs, training courses, or membership? We'd love to hear from
+                    you. Reach out to us today!</p>
             </div>
         </div>
     </section>
@@ -1379,7 +1386,9 @@
                     </div>
                     <h2>Let's Start a Conversation</h2>
                     <p>
-                        Whether you're interested in our research programs, training courses, membership opportunities, or collaboration, we're here to help. Fill out the form and our team will get back to you within 24-48 hours.
+                        Whether you're interested in our research programs, training courses, membership opportunities,
+                        or collaboration, we're here to help. Fill out the form and our team will get back to you within
+                        24-48 hours.
                     </p>
 
                     <div class="contact-details">
@@ -1441,18 +1450,21 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="firstName">First Name <span class="required">*</span></label>
-                                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name"
+                                    required>
                             </div>
                             <div class="form-group">
                                 <label for="lastName">Last Name <span class="required">*</span></label>
-                                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name"
+                                    required>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="email">Email Address <span class="required">*</span></label>
-                                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                                <input type="email" id="email" name="email" placeholder="Enter your email address"
+                                    required>
                             </div>
                             <div class="form-group">
                                 <label for="phone">Phone Number</label>
@@ -1463,7 +1475,8 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="organization">Organization / Institution</label>
-                                <input type="text" id="organization" name="organization" placeholder="Enter your organization name">
+                                <input type="text" id="organization" name="organization"
+                                    placeholder="Enter your organization name">
                             </div>
                             <div class="form-group">
                                 <label for="designation">Designation / Role</label>
@@ -1489,12 +1502,14 @@
 
                         <div class="form-group">
                             <label for="subject">Subject <span class="required">*</span></label>
-                            <input type="text" id="subject" name="subject" placeholder="Enter the subject of your inquiry" required>
+                            <input type="text" id="subject" name="subject"
+                                placeholder="Enter the subject of your inquiry" required>
                         </div>
 
                         <div class="form-group">
                             <label for="message">Message <span class="required">*</span></label>
-                            <textarea id="message" name="message" placeholder="Please describe your inquiry in detail..." required></textarea>
+                            <textarea id="message" name="message"
+                                placeholder="Please describe your inquiry in detail..." required></textarea>
                         </div>
 
                         <div class="form-group">
@@ -1517,14 +1532,16 @@
 
                         <div class="checkbox-group">
                             <input type="checkbox" id="privacy" name="privacy" required>
-                            <label for="privacy">I agree to the <a href="#">Privacy Policy</a> and consent to the processing of my personal data. <span class="required">*</span></label>
+                            <label for="privacy">I agree to the <a href="#">Privacy Policy</a> and consent to the
+                                processing of my personal data. <span class="required">*</span></label>
                         </div>
 
                         <div class="form-submit">
                             <button type="submit" class="btn btn-primary">
                                 <i class="fas fa-paper-plane"></i> Send Message
                             </button>
-                            <span class="form-note"><i class="fas fa-lock"></i> Your information is secure with us.</span>
+                            <span class="form-note"><i class="fas fa-lock"></i> Your information is secure with
+                                us.</span>
                         </div>
                     </form>
 
@@ -1534,7 +1551,8 @@
                             <i class="fas fa-check"></i>
                         </div>
                         <h3>Thank You!</h3>
-                        <p>Your message has been sent successfully. Our team will review your inquiry and get back to you within 24-48 hours.</p>
+                        <p>Your message has been sent successfully. Our team will review your inquiry and get back to
+                            you within 24-48 hours.</p>
                         <button class="btn btn-primary" onclick="resetForm()">
                             <i class="fas fa-redo"></i> Send Another Message
                         </button>
@@ -1547,11 +1565,9 @@
     <!-- Map Section -->
     <section class="map-section">
         <div class="map-container">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224346.48129272573!2d77.04417858017498!3d28.52728034389188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1699000000000!5m2!1sen!2sin" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224346.48129272573!2d77.04417858017498!3d28.52728034389188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1699000000000!5m2!1sen!2sin"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
         <!-- <div class="container">
@@ -1576,7 +1592,8 @@
                 </div>
                 <h2 class="section-title">Types of Inquiries We Handle</h2>
                 <p class="section-subtitle">
-                    Whether you're a student, researcher, institution, or industry professional, we have dedicated support for your specific needs.
+                    Whether you're a student, researcher, institution, or industry professional, we have dedicated
+                    support for your specific needs.
                 </p>
             </div>
             <div class="inquiry-grid">
@@ -1585,7 +1602,8 @@
                         <i class="fas fa-user-plus"></i>
                     </div>
                     <h3>Membership Inquiries</h3>
-                    <p>Learn about our membership plans, categories, benefits, and how to join our research community.</p>
+                    <p>Learn about our membership plans, categories, benefits, and how to join our research community.
+                    </p>
                     <a href="membership.html">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="inquiry-card">
@@ -1593,7 +1611,8 @@
                         <i class="fas fa-graduation-cap"></i>
                     </div>
                     <h3>Training Programs</h3>
-                    <p>Get information about our laboratory training courses, workshops, and skill development programs.</p>
+                    <p>Get information about our laboratory training courses, workshops, and skill development programs.
+                    </p>
                     <a href="programs.html">View Programs <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="inquiry-card">
@@ -1601,7 +1620,8 @@
                         <i class="fas fa-flask"></i>
                     </div>
                     <h3>Research Collaboration</h3>
-                    <p>Explore opportunities for joint research projects, academic partnerships, and collaborative initiatives.</p>
+                    <p>Explore opportunities for joint research projects, academic partnerships, and collaborative
+                        initiatives.</p>
                     <a href="research.html">Explore Research <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="inquiry-card">
@@ -1609,7 +1629,8 @@
                         <i class="fas fa-file-alt"></i>
                     </div>
                     <h3>Dissertation Support</h3>
-                    <p>Inquire about our dissertation guidance, thesis support, and Ph.D. research assistance services.</p>
+                    <p>Inquire about our dissertation guidance, thesis support, and Ph.D. research assistance services.
+                    </p>
                     <a href="membership.html#custom-projects">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="inquiry-card">
@@ -1617,7 +1638,8 @@
                         <i class="fas fa-university"></i>
                     </div>
                     <h3>Institutional Partnership</h3>
-                    <p>Partner with us for faculty development, student training, infrastructure sharing, and joint programs.</p>
+                    <p>Partner with us for faculty development, student training, infrastructure sharing, and joint
+                        programs.</p>
                     <a href="about.html#affiliations">View Partnerships <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="inquiry-card">
@@ -1625,7 +1647,8 @@
                         <i class="fas fa-microscope"></i>
                     </div>
                     <h3>Testing Services</h3>
-                    <p>Access our ISO-certified laboratory for scientific testing, analysis, and research support services.</p>
+                    <p>Access our ISO-certified laboratory for scientific testing, analysis, and research support
+                        services.</p>
                     <a href="research.html">View Services <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -1641,7 +1664,8 @@
                 </div>
                 <h2 class="section-title">Connect With Us</h2>
                 <p class="section-subtitle">
-                    Follow us on social media to stay updated with the latest news, research updates, events, and opportunities.
+                    Follow us on social media to stay updated with the latest news, research updates, events, and
+                    opportunities.
                 </p>
                 <div class="social-grid">
                     <a href="#" class="social-card">
@@ -1709,27 +1733,33 @@
             <div class="faq-grid">
                 <div class="faq-card">
                     <h4><i class="fas fa-clock"></i> How long does it take to get a response?</h4>
-                    <p>We typically respond to all inquiries within 24-48 business hours. For urgent matters, please call our office directly.</p>
+                    <p>We typically respond to all inquiries within 24-48 business hours. For urgent matters, please
+                        call our office directly.</p>
                 </div>
                 <div class="faq-card">
                     <h4><i class="fas fa-calendar-alt"></i> Can I schedule a visit to your laboratory?</h4>
-                    <p>Yes! Please fill out the contact form mentioning your interest in visiting, and our team will coordinate a suitable time for your visit.</p>
+                    <p>Yes! Please fill out the contact form mentioning your interest in visiting, and our team will
+                        coordinate a suitable time for your visit.</p>
                 </div>
                 <div class="faq-card">
                     <h4><i class="fas fa-globe"></i> Do you offer online consultations?</h4>
-                    <p>Absolutely! We offer virtual consultations via video call for those who cannot visit in person. Request an online meeting through the contact form.</p>
+                    <p>Absolutely! We offer virtual consultations via video call for those who cannot visit in person.
+                        Request an online meeting through the contact form.</p>
                 </div>
                 <div class="faq-card">
                     <h4><i class="fas fa-users"></i> How can my institution partner with SARG?</h4>
-                    <p>Select "Institutional Partnership" in the inquiry type and provide details about your institution. Our partnerships team will reach out to discuss opportunities.</p>
+                    <p>Select "Institutional Partnership" in the inquiry type and provide details about your
+                        institution. Our partnerships team will reach out to discuss opportunities.</p>
                 </div>
                 <div class="faq-card">
                     <h4><i class="fas fa-user-graduate"></i> I'm a student. How can I get involved?</h4>
-                    <p>Students can apply for membership, enroll in training programs, or participate in workshops. Check our Membership and Programs pages for details.</p>
+                    <p>Students can apply for membership, enroll in training programs, or participate in workshops.
+                        Check our Membership and Programs pages for details.</p>
                 </div>
                 <div class="faq-card">
                     <h4><i class="fas fa-language"></i> What languages do you support?</h4>
-                    <p>Our primary language of communication is English. However, we can accommodate Hindi speakers as well for most inquiries.</p>
+                    <p>Our primary language of communication is English. However, we can accommodate Hindi speakers as
+                        well for most inquiries.</p>
                 </div>
             </div>
         </div>
@@ -1741,7 +1771,8 @@
             <div class="cta-content">
                 <h2>Ready to Start Your Research Journey?</h2>
                 <p>
-                    Join our community of researchers and scholars. Explore membership options, training programs, and collaboration opportunities.
+                    Join our community of researchers and scholars. Explore membership options, training programs, and
+                    collaboration opportunities.
                 </p>
                 <div class="cta-buttons">
                     <a href="membership.html" class="btn btn-white">
@@ -1807,6 +1838,7 @@
                         <li><a href="#">Careers</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-column">
                     <h4>Contact Us</h4>
                     <ul class="footer-contact">
@@ -1847,13 +1879,13 @@
         const contactForm = document.getElementById('contactForm');
         const formSuccess = document.getElementById('formSuccess');
 
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             // Simulate form submission
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
-            
+
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
 
@@ -1876,7 +1908,7 @@
 
         // Scroll to Top Button
         const scrollTopBtn = document.getElementById('scrollTop');
-        
+
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
                 scrollTopBtn.classList.add('visible');
@@ -1894,14 +1926,15 @@
 
         // Form Input Animation
         document.querySelectorAll('.form-group input, .form-group textarea, .form-group select').forEach(input => {
-            input.addEventListener('focus', function() {
+            input.addEventListener('focus', function () {
                 this.parentElement.classList.add('focused');
             });
-            
-            input.addEventListener('blur', function() {
+
+            input.addEventListener('blur', function () {
                 this.parentElement.classList.remove('focused');
             });
         });
     </script>
 </body>
+
 </html>
