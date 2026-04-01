@@ -1143,6 +1143,332 @@
             opacity: 1;
             visibility: visible;
         }
+
+
+        .internship-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .internship-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+        }
+
+        .internship-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition);
+        }
+
+        .internship-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+            border-color: rgba(10, 92, 54, 0.1);
+        }
+
+        .internship-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .internship-number {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 35px;
+            height: 35px;
+            background: rgba(10, 92, 54, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--primary);
+        }
+
+        .internship-icon {
+            width: 65px;
+            height: 65px;
+            background: rgba(10, 92, 54, 0.1);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1.25rem;
+            transition: var(--transition);
+        }
+
+        .internship-card:hover .internship-icon {
+            background: var(--gradient-primary);
+            color: var(--white);
+            transform: scale(1.1);
+        }
+
+        .internship-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+            line-height: 1.4;
+        }
+
+        .internship-card p {
+            font-size: 0.9rem;
+            color: var(--gray);
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+        }
+
+        .internship-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .internship-link:hover {
+            gap: 0.75rem;
+            color: var(--primary-dark);
+        }
+
+        .internship-card a {
+            text-decoration: none;
+        }
+
+        /* Featured Card */
+        .internship-card.featured {
+            background: var(--gradient-primary);
+            color: var(--white);
+            grid-column: span 2;
+        }
+
+        .internship-card.featured .internship-number {
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--white);
+        }
+
+        .internship-card.featured .internship-icon {
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--white);
+        }
+
+        .internship-card.featured:hover .internship-icon {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        .internship-card.featured h3 {
+            color: var(--white);
+            font-size: 1.35rem;
+        }
+
+        .internship-card.featured p {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .internship-card.featured .internship-link {
+            color: var(--accent);
+        }
+
+        .internship-card.featured::before {
+            background: var(--accent);
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .page-header-content h1 {
+                font-size: 2rem;
+            }
+
+            .internship-card {
+                padding: 1.5rem;
+            }
+
+            .floating-stats {
+                position: relative;
+                left: auto;
+                bottom: auto;
+                margin-top: 1.5rem;
+                justify-content: center;
+            }
+
+            .programs-intro-image::before,
+            .programs-intro-image::after {
+                display: none;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .academic-card-content {
+                padding: 2rem 1.5rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .internship-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .internship-card.featured {
+                grid-column: span 3;
+            }
+
+            .duration-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .duration-card.popular {
+                transform: none;
+            }
+
+            .duration-card.popular:hover {
+                transform: translateY(-10px);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .programs-intro {
+                grid-template-columns: 1fr;
+            }
+
+            .programs-intro-image {
+                order: -1;
+            }
+
+            .floating-stats {
+                left: 20px;
+                bottom: 20px;
+            }
+
+            .internship-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .internship-card.featured {
+                grid-column: span 2;
+            }
+
+            .flagship-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .academic-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .course-detail-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .services-image {
+                order: -1;
+            }
+
+            .partnership-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-header {
+                padding: 150px 0 80px;
+                min-height: 400px;
+            }
+
+            .page-header-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .offer-banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.5rem;
+            }
+
+            .section {
+                padding: 4rem 0;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .programs-intro-content h2,
+            .services-content h2 {
+                font-size: 2rem;
+            }
+
+            .internship-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .internship-card.featured {
+                grid-column: span 1;
+            }
+
+            .academic-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .duration-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .intro-highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .partnership-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .course-tabs {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .course-tab {
+                text-align: center;
+            }
+
+            .cta-content h2 {
+                font-size: 2rem;
+            }
+        }
     </style>
 </head>
 
@@ -1164,7 +1490,7 @@
                     <div class="logo-sub">Biolabs</div>
                 </div> -->
             </a>
-                           
+
             <ul class="nav-menu" id="navMenu">
                 <li class="nav-item active">
                     <a href="index.html" class="nav-link">Home</a>
@@ -1416,7 +1742,7 @@
     </section>
 
     <!-- Vision & Mission Section -->
-    <section class="section section-dark" id="vision">
+    <!-- <section class="section section-dark" id="vision">
         <div class="container">
             <div class="section-header">
                 <div class="section-badge">
@@ -1464,7 +1790,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Services Section -->
     <section class="section section-light" id="services">
@@ -1478,6 +1804,7 @@
                     Comprehensive research and training solutions designed to empower scholars and institutions
                 </p>
             </div>
+
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
@@ -1564,85 +1891,159 @@
     </section>
 
     <!-- Programs Section -->
-    <section class="section" id="programs">
+    <section class="section section-light" id="internships">
         <div class="container">
             <div class="section-header">
                 <div class="section-badge">
-                    <i class="fas fa-book-open"></i> Training Programs
+                    <i class="fas fa-graduation-cap"></i> Internship Programs
                 </div>
-                <h2 class="section-title">Our Flagship Courses</h2>
+                <h2 class="section-title">SARG Research Biolabs Training Modules</h2>
                 <p class="section-subtitle">
-                    Structured training programs designed to build research competence and laboratory expertise
+                    Choose from our diverse range of specialized training programs designed to build expertise in
+                    various domains of Biotechnology and Life Sciences.
                 </p>
             </div>
-            <div class="programs-grid">
-                <div class="program-card">
-                    <div class="program-image">
-                        <img src="courses/c1.avif" alt="Research Foundation">
-                        <span class="program-badge">Foundation</span>
+            <div class="internship-grid">
+                <!-- Program 1 -->
+                <div class="internship-card">
+                    <span class="internship-number">01</span>
+                    <div class="internship-icon">
+                        <i class="fas fa-bacteria"></i>
                     </div>
-                    <div class="program-content">
-                        <h3>Research Foundation Course</h3>
-                        <p>Build strong fundamentals in scientific research, laboratory skills, and analytical thinking.
-                        </p>
-                        <div class="program-meta">
-                            <span><i class="fas fa-clock"></i> Hybrid</span>
-                            <span><i class="fas fa-layer-group"></i> 6 Modules</span>
-                        </div>
-                    </div>
+                    <h3>Industrial Microbiology</h3>
+                    <p>Learn microbial cultivation, fermentation technology, and industrial applications of
+                        microorganisms.</p>
+                    <a href="modules/1.html" class="internship-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="program-card">
-                    <div class="program-image">
-                        <img src="courses/c2.avif" alt="Molecular Biology">
-                        <span class="program-badge">Advanced</span>
+
+                <!-- Program 2 -->
+                <div class="internship-card">
+                    <span class="internship-number">02</span>
+                    <div class="internship-icon">
+                        <i class="fas fa-dna"></i>
                     </div>
-                    <div class="program-content">
-                        <h3>Molecular Biology Training</h3>
-                        <p>Intensive hands-on laboratory course in molecular and applied biological techniques.</p>
-                        <div class="program-meta">
-                            <span><i class="fas fa-clock"></i> Hybrid</span>
-                            <span><i class="fas fa-layer-group"></i> 5 Modules</span>
-                        </div>
-                    </div>
+                    <h3>Molecular Biology & rDNA Technology</h3>
+                    <p>Master DNA/RNA techniques, PCR, cloning, gene expression, and recombinant DNA technology.</p>
+                    <a href="modules/2.html" class="internship-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="program-card">
-                    <div class="program-image">
-                        <img src="courses/c3.avif" alt="Microbiology">
-                        <span class="program-badge">Practical</span>
+
+                <!-- Program 3 -->
+                <div class="internship-card">
+                    <span class="internship-number">03</span>
+                    <div class="internship-icon">
+                        <i class="fas fa-apple-alt"></i>
                     </div>
-                    <div class="program-content">
-                        <h3>Microbiology Experimentation</h3>
-                        <p>Practical knowledge of microbial techniques, sterile handling, and applied analysis.</p>
-                        <div class="program-meta">
-                            <span><i class="fas fa-clock"></i> Hybrid</span>
-                            <span><i class="fas fa-layer-group"></i> 5 Modules</span>
-                        </div>
-                    </div>
+                    <h3>Food Biotechnology</h3>
+                    <p>Explore food processing, quality control, fermentation, and food safety analysis techniques.</p>
+                    <a href="modules/3.html" class="internship-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="program-card">
-                    <div class="program-image">
-                        <img src="courses/c4.avif" alt="Biostatistics">
-                        <span class="program-badge">Analytics</span>
+
+                <!-- Program 4 -->
+                <div class="internship-card">
+                    <span class="internship-number">04</span>
+                    <div class="internship-icon">
+                        <i class="fas fa-heartbeat"></i>
                     </div>
-                    <div class="program-content">
-                        <h3>Biostatistics with SPSS</h3>
-                        <p>Essential statistical skills for scientific research and publication-quality data analysis.
-                        </p>
-                        <div class="program-meta">
-                            <span><i class="fas fa-clock"></i> Online</span>
-                            <span><i class="fas fa-layer-group"></i> 5 Modules</span>
-                        </div>
-                    </div>
+                    <h3>Medical Biotechnology</h3>
+                    <p>Study diagnostics, immunology, drug development, and biomedical research techniques.</p>
+                    <a href="modules/4.html" class="internship-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
-            </div>
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="programs.html" class="btn btn-primary"
-                    style="background: var(--primary); color: var(--white);">
-                    <i class="fas fa-th-list"></i> View All Programs
-                </a>
+
+                <!-- Program 5 -->
+                <div class="internship-card">
+                    <span class="internship-number">05</span>
+                    <div class="internship-icon">
+                        <i class="fas fa-fingerprint"></i>
+                    </div>
+                    <h3>Forensic Science</h3>
+                    <p>Learn DNA profiling, forensic biology, evidence analysis, and molecular forensics.</p>
+                    <a href="modules/5.html" class="internship-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Program 6 -->
+                <div class="internship-card">
+                    <span class="internship-number">06</span>
+                    <div class="internship-icon">
+                        <i class="fas fa-vials"></i>
+                    </div>
+                    <h3>Mix Module (Micro, Mol Bio & Biochem)</h3>
+                    <p>Comprehensive training combining microbiology, molecular biology, and biochemistry fundamentals.
+                    </p>
+                    <a href="modules/6.html" class="internship-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Program 7 - Featured -->
+                <div class="internship-card featured">
+                    <span class="internship-number">07</span>
+                    <div class="internship-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>Advanced rDNA Technology & Animal Cell Culture</h3>
+                    <p>Advanced techniques in recombinant DNA technology, mammalian cell culture, transfection, protein
+                        expression, and downstream processing. Ideal for those pursuing research careers in
+                        biotechnology and pharmaceutical industries.</p>
+                    <a href="modules/7.html" class="internship-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Program 8 -->
+                <div class="internship-card">
+                    <span class="internship-number">08</span>
+                    <div class="internship-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Short Duration Programs</h3>
+                    <p>Flexible 45 days, 2 months & 3 months programs for focused skill development.</p>
+                    <a href="modules/8.html" class="internship-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Program 9 -->
+                <div class="internship-card">
+                    <span class="internship-number">09</span>
+                    <div class="internship-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Job Oriented Training</h3>
+                    <p>Industry-focused training with 100% placement assistance in biotech companies.</p>
+                    <a href="modules/9.html" class="internship-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Program 10 -->
+                <div class="internship-card">
+                    <span class="internship-number">10</span>
+                    <div class="internship-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Project & Dissertation</h3>
+                    <p>Research project support for M.Sc., M.Tech., and B.Tech. dissertation requirements.</p>
+                    <a href="modules/10.html" class="internship-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Program 11 -->
+                <div class="internship-card">
+                    <span class="internship-number">11</span>
+                    <div class="internship-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Ph.D. Assistance</h3>
+                    <p>Comprehensive support for doctoral research including experimental design and thesis guidance.
+                    </p>
+                    <a href="modules/11.html" class="internship-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Program 12 -->
+                <div class="internship-card">
+                    <span class="internship-number">12</span>
+                    <div class="internship-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Online Courses</h3>
+                    <p>Flexible online learning modules for theoretical foundations and computational biology.</p>
+                    <a href="modules/12.html" class="internship-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
     </section>
+
 
     <!-- CTA Section -->
     <section class="cta-section">
